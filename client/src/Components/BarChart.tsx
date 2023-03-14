@@ -79,7 +79,8 @@ const BarChart = () => {
         barMaxWidth: 70,
         showEffectOn: 'emphasis'
       }
-    ]
+    ],
+    color: ['#81d6d9 ']
   };
 
   const barChartHeading =
