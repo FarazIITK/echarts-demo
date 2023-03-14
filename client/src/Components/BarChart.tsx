@@ -76,7 +76,8 @@ const BarChart = () => {
       {
         data: avgMalicAcidValues,
         type: 'bar',
-        barMaxWidth: 70
+        barMaxWidth: 70,
+        showEffectOn: 'emphasis'
       }
     ]
   };

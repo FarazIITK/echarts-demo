@@ -48,7 +48,8 @@ const ScatterPlot = () => {
       {
         data: scatterPlotData,
         type: 'scatter',
-        symbolSize: symbolSize
+        symbolSize: symbolSize,
+        symbol: 'circle'
       }
     ]
   };
