@@ -42,9 +42,16 @@ const BarChart = () => {
         countPerCategory++;
         totalMalicAcidValuePerCategory += malicAcid;
       }
-      //
+
+      // Find the average of malic acid and rount it off
+      const averageMalicAcidPerCategory =
+        totalMalicAcidValuePerCategory / countPerCategory;
+
+      const roundedAverageMalicAcidPerCategory =
+        Math.round(averageMalicAcidPerCategory * 100) / 100;
+
       avgMalicAcidValues.push(
-        totalMalicAcidValuePerCategory / countPerCategory
+        roundedAverageMalicAcidPerCategory
       );
     });
   });
