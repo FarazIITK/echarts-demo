@@ -6,8 +6,6 @@ type EChartsOption = echarts.EChartOption;
 const BarChart = () => {
   // constants for plot
   const chartLabels = {
-    heading:
-      'Bar graph of average malic acid per alcohol category',
     xAxis: 'Alcohol Category',
     yAxis: 'Average Malic Acid Value'
   };
@@ -77,13 +75,15 @@ const BarChart = () => {
     series: [
       {
         data: avgMalicAcidValues,
-        type: 'bar'
+        type: 'bar',
+        barMaxWidth: 70
       }
     ]
   };
 
   const barChartHeading =
     'Average Malic-Acid value per alcohol category';
+
   return (
     <div className="graph blue-border">
       <h1>{barChartHeading}</h1>

@@ -7,7 +7,6 @@ const ScatterPlot = () => {
   // constants for plot
   const symbolSize = 10;
   const chartLabels = {
-    heading: 'Scatter plot of hue vs color-intensity',
     xAxis: 'Color Intensity',
     yAxis: 'Hue'
   };
@@ -31,7 +30,8 @@ const ScatterPlot = () => {
         fontWeight: 'bold',
         fontSize: 16
       },
-      type: 'value'
+      type: 'value',
+      scale: true
     },
     yAxis: {
       name: chartLabels.yAxis,
@@ -41,7 +41,8 @@ const ScatterPlot = () => {
         fontWeight: 'bold',
         fontSize: 16
       },
-      type: 'value'
+      type: 'value',
+      scale: true
     },
     series: [
       {
@@ -52,9 +53,12 @@ const ScatterPlot = () => {
     ]
   };
 
+  const scatterPlotHeading =
+    'Scatter plot of hue vs color-intensity';
+
   return (
     <div className="graph red-border">
-      <h1>Scatter Plot</h1>
+      <h1>{scatterPlotHeading}</h1>
       <ReactEcharts
         option={scatterPlotOptions}
         style={{ width: '800px', height: '400px' }}
