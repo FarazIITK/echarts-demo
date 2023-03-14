@@ -25,10 +25,14 @@ const ScatterPlot = () => {
   const scatterPlotOptions: EChartsOption = {
     xAxis: {
       name: chartLabels.xAxis,
+      nameLocation: 'middle',
+      nameGap: 30,
       type: 'value'
     },
     yAxis: {
       name: chartLabels.yAxis,
+      nameLocation: 'middle',
+      nameGap: 30,
       type: 'value'
     },
     series: [

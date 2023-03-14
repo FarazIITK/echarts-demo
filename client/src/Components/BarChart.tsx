@@ -54,11 +54,15 @@ const BarChart = () => {
   const options: EChartsOption = {
     xAxis: {
       name: chartLabels.xAxis,
+      nameLocation: 'middle',
+      nameGap: 30,
       type: 'category',
       data: uniqueAlcoholCategory
     },
     yAxis: {
       name: chartLabels.yAxis,
+      nameLocation: 'middle',
+      nameGap: 30,
       type: 'value'
     },
     series: [
