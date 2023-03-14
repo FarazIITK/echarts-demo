@@ -45,9 +45,9 @@ const ScatterPlot = () => {
     },
     series: [
       {
-        symbolSize: symbolSize,
         data: scatterPlotData,
-        type: 'scatter'
+        type: 'scatter',
+        symbolSize: symbolSize
       }
     ]
   };

@@ -66,12 +66,13 @@ const BarChart = () => {
     yAxis: {
       name: chartLabels.yAxis,
       nameLocation: 'middle',
-      nameGap: 30,
+      nameGap: 40,
       nameTextStyle: {
         fontWeight: 'bold',
         fontSize: 16
       },
-      type: 'value'
+      type: 'value',
+      scale: true
     },
     series: [
       {
