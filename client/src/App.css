@@ -16,11 +16,15 @@
 }
 
 .red-border {
-  background: #cf573d;
+  /* background: #cf573d; */
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 .blue-border {
-  background: rgb(71, 205, 250);
+  /* background: rgb(71, 205, 250); */
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 .App-logo {

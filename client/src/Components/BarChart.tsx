@@ -1,7 +1,7 @@
 const BarChart = () => {
   return (
     <div className="graph blue-border">
-      <h1>Scatter Plot</h1>
+      <h1>Bar Chart</h1>
     </div>
   );
 };
