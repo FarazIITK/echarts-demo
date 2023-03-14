@@ -2,9 +2,15 @@ import { wineData } from '../assets/wineData';
 import ReactEcharts from 'echarts-for-react';
 
 const ScatterPlot = () => {
+  // constants for plot
+  const symbolSize = 10;
+
+  // Logic to get the data for scatter plot
   const scatterPlotData: [number, number][] = wineData.map(
     (individualWineData) => {
       const { colorIntensity, hue } = individualWineData;
+      // x-axis: colorInternsity
+      // y-sxis: hue
       return [colorIntensity, hue];
     }
   );
@@ -19,7 +25,7 @@ const ScatterPlot = () => {
     },
     series: [
       {
-        symbolSize: 10,
+        symbolSize: symbolSize,
         data: scatterPlotData,
         type: 'scatter'
       }
