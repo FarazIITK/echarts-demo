@@ -2,9 +2,14 @@ import ReactEcharts from 'echarts-for-react';
 import { wineData } from '../assets/wineData';
 
 const BarChart = () => {
+  //   x-axis values: unique alcohol categories
   let uniqueAlcoholCategory: number[] = [];
+  //   y-axis values: average malic acid per category
+  let avgMalicAcidValues: number[] = [];
 
+  // Logic to find the unique alcohol catgories from sample data
   wineData.forEach((individualWineData) => {
+    // Destructuring the useful properties
     const { alcohol: currentAlcoholCategory } =
       individualWineData;
     if (
@@ -16,19 +21,23 @@ const BarChart = () => {
     }
   });
 
-  let avgMalicAcidValues: number[] = [];
-
+  //   Logic to calculate the average value of malic acid per alcohol category
   uniqueAlcoholCategory.forEach((alcoholCategory) => {
-    let count: number = 0;
-    let malicAcidValue: number = 0;
+    //   Initialize the count-per-category and total-malic-acid value as zero
+    let countPerCategory: number = 0;
+    let totalMalicAcidValuePerCategory: number = 0;
 
     wineData.forEach((individualWineData) => {
+      // Destructuring the useful properties
       const { alcohol, malicAcid } = individualWineData;
       if (alcohol === alcoholCategory) {
-        count++;
-        malicAcidValue += malicAcid;
+        countPerCategory++;
+        totalMalicAcidValuePerCategory += malicAcid;
       }
-      avgMalicAcidValues.push(malicAcidValue / count);
+      //
+      avgMalicAcidValues.push(
+        totalMalicAcidValuePerCategory / countPerCategory
+      );
     });
   });
 
@@ -52,9 +61,12 @@ const BarChart = () => {
       trigger: 'axis'
     }
   };
+
+  const barChartHeading =
+    'Average Malic-Acid value per alcohol category';
   return (
     <div className="graph blue-border">
-      <h1>Bar Chart</h1>
+      <h1>{barChartHeading}</h1>
       <ReactEcharts
         option={options}
         style={{ width: '600px', height: '300px' }}
