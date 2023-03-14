@@ -17,7 +17,7 @@ const ScatterPlot = () => {
     (individualWineData) => {
       const { colorIntensity, hue } = individualWineData;
       // x-axis: colorIntensity
-      // y-sxis: hue
+      // y-axis: hue
       return [colorIntensity, hue];
     }
   );
@@ -27,12 +27,20 @@ const ScatterPlot = () => {
       name: chartLabels.xAxis,
       nameLocation: 'middle',
       nameGap: 30,
+      nameTextStyle: {
+        fontWeight: 'bold',
+        fontSize: 16
+      },
       type: 'value'
     },
     yAxis: {
       name: chartLabels.yAxis,
       nameLocation: 'middle',
       nameGap: 30,
+      nameTextStyle: {
+        fontWeight: 'bold',
+        fontSize: 16
+      },
       type: 'value'
     },
     series: [

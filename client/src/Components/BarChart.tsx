@@ -56,6 +56,10 @@ const BarChart = () => {
       name: chartLabels.xAxis,
       nameLocation: 'middle',
       nameGap: 30,
+      nameTextStyle: {
+        fontWeight: 'bold',
+        fontSize: 16
+      },
       type: 'category',
       data: uniqueAlcoholCategory
     },
@@ -63,6 +67,10 @@ const BarChart = () => {
       name: chartLabels.yAxis,
       nameLocation: 'middle',
       nameGap: 30,
+      nameTextStyle: {
+        fontWeight: 'bold',
+        fontSize: 16
+      },
       type: 'value'
     },
     series: [
