@@ -4,6 +4,14 @@ import { wineData } from '../assets/wineData';
 type EChartsOption = echarts.EChartOption;
 
 const BarChart = () => {
+  // constants for plot
+  const chartLabels = {
+    heading:
+      'Bar graph of average malic acid per alcohol category',
+    xAxis: 'Alcohol Category',
+    yAxis: 'Average Malic Acid Value'
+  };
+
   //   x-axis values: unique alcohol categories
   let uniqueAlcoholCategory: number[] = [];
   //   y-axis values: average malic acid per category
@@ -44,24 +52,21 @@ const BarChart = () => {
   });
 
   const options: EChartsOption = {
-    grid: { top: 20, right: 40, bottom: 20, left: 40 },
     xAxis: {
+      name: chartLabels.xAxis,
       type: 'category',
       data: uniqueAlcoholCategory
     },
     yAxis: {
+      name: chartLabels.yAxis,
       type: 'value'
     },
     series: [
       {
         data: avgMalicAcidValues,
-        type: 'bar',
-        smooth: true
+        type: 'bar'
       }
-    ],
-    tooltip: {
-      trigger: 'axis'
-    }
+    ]
   };
 
   const barChartHeading =
@@ -71,7 +76,7 @@ const BarChart = () => {
       <h1>{barChartHeading}</h1>
       <ReactEcharts
         option={options}
-        style={{ width: '600px', height: '300px' }}
+        style={{ width: '800px', height: '400px' }}
       />
     </div>
   );
