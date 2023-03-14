@@ -24,10 +24,12 @@ const ScatterPlot = () => {
 
   const scatterPlotOptions: EChartsOption = {
     xAxis: {
-      name: chartLabels.xAxis
+      name: chartLabels.xAxis,
+      type: 'value'
     },
     yAxis: {
-      name: chartLabels.yAxis
+      name: chartLabels.yAxis,
+      type: 'value'
     },
     series: [
       {
@@ -43,7 +45,7 @@ const ScatterPlot = () => {
       <h1>Scatter Plot</h1>
       <ReactEcharts
         option={scatterPlotOptions}
-        style={{ width: '600px', height: '300px' }}
+        style={{ width: '800px', height: '400px' }}
       />
     </div>
   );
