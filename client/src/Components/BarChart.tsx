@@ -1,6 +1,8 @@
 import ReactEcharts from 'echarts-for-react';
 import { wineData } from '../assets/wineData';
 
+type EChartsOption = echarts.EChartOption;
+
 const BarChart = () => {
   //   x-axis values: unique alcohol categories
   let uniqueAlcoholCategory: number[] = [];
@@ -41,7 +43,7 @@ const BarChart = () => {
     });
   });
 
-  const options = {
+  const options: EChartsOption = {
     grid: { top: 20, right: 40, bottom: 20, left: 40 },
     xAxis: {
       type: 'category',

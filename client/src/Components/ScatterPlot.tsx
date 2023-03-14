@@ -1,6 +1,8 @@
 import { wineData } from '../assets/wineData';
 import ReactEcharts from 'echarts-for-react';
 
+type EChartsOption = echarts.EChartOption;
+
 const ScatterPlot = () => {
   // constants for plot
   const symbolSize = 10;
@@ -15,7 +17,7 @@ const ScatterPlot = () => {
     }
   );
 
-  const scatterPlotOptions = {
+  const scatterPlotOptions: EChartsOption = {
     grid: { top: 20, right: 40, bottom: 20, left: 40 },
     xAxis: {
       name: 'Color Intensity'
