@@ -1,9 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ScatterPlot from './Components/ScatterPlot';
+import BarChart from './Components/BarChart';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <ScatterPlot />
+      <BarChart />
+    </div>
+  );
 }
 
 export default App;
