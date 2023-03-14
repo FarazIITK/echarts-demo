@@ -6,24 +6,28 @@ type EChartsOption = echarts.EChartOption;
 const ScatterPlot = () => {
   // constants for plot
   const symbolSize = 10;
+  const chartLabels = {
+    heading: 'Scatter plot of hue vs color-intensity',
+    xAxis: 'Color Intensity',
+    yAxis: 'Hue'
+  };
 
   // Logic to get the data for scatter plot
   const scatterPlotData: [number, number][] = wineData.map(
     (individualWineData) => {
       const { colorIntensity, hue } = individualWineData;
-      // x-axis: colorInternsity
+      // x-axis: colorIntensity
       // y-sxis: hue
       return [colorIntensity, hue];
     }
   );
 
   const scatterPlotOptions: EChartsOption = {
-    grid: { top: 20, right: 40, bottom: 20, left: 40 },
     xAxis: {
-      name: 'Color Intensity'
+      name: chartLabels.xAxis
     },
     yAxis: {
-      name: 'Hue'
+      name: chartLabels.yAxis
     },
     series: [
       {
