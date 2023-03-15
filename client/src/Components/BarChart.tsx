@@ -1,5 +1,6 @@
 import ReactEcharts from 'echarts-for-react';
 import { wineData } from '../assets/wineData';
+import { getRoundOffValue } from '../utils/getRoundOffValue';
 
 type EChartsOption = echarts.EChartOption;
 
@@ -48,7 +49,7 @@ const BarChart = () => {
         totalMalicAcidValuePerCategory / countPerCategory;
 
       const roundedAverageMalicAcidPerCategory =
-        Math.round(averageMalicAcidPerCategory * 100) / 100;
+        getRoundOffValue(averageMalicAcidPerCategory);
 
       avgMalicAcidValues.push(
         roundedAverageMalicAcidPerCategory

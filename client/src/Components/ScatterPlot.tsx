@@ -1,5 +1,6 @@
 import { wineData } from '../assets/wineData';
 import ReactEcharts from 'echarts-for-react';
+import { getRoundOffValue } from '../utils/getRoundOffValue';
 
 type EChartsOption = echarts.EChartOption;
 
@@ -17,7 +18,10 @@ const ScatterPlot = () => {
       const { colorIntensity, hue } = individualWineData;
       // x-axis: colorIntensity
       // y-axis: hue
-      return [colorIntensity, hue];
+      return [
+        getRoundOffValue(colorIntensity),
+        getRoundOffValue(hue)
+      ];
     }
   );
 
