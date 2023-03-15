@@ -87,7 +87,8 @@ const BarChart = () => {
         showEffectOn: 'emphasis'
       }
     ],
-    color: ['#81d6d9 ']
+    color: ['#81d6d9 '],
+    tooltip: {}
   };
 
   const barChartHeading =

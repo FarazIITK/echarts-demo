@@ -52,7 +52,8 @@ const ScatterPlot = () => {
         symbol: 'circle'
       }
     ],
-    color: ['#cab133 ']
+    color: ['#cab133 '],
+    tooltip: {}
   };
 
   const scatterPlotHeading =
