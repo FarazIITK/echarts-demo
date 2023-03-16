@@ -89,7 +89,14 @@ const BarChart = () => {
       }
     ],
     color: ['#81d6d9 '],
-    tooltip: {}
+    tooltip: {
+      formatter: 'Avg Malic Acid for {b0} is {c0}'
+    },
+    dataZoom: [
+      {
+        type: 'inside'
+      }
+    ]
   };
 
   const barChartHeading =
